@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Teapot FAQ - Maintenance</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <h1>Teapot FAQ</h1>
+        <nav>
+            <ul>
+                <li><a href="index.html">Documentation Utilisateur</a></li>
+                <li><a href="maintenance.html">Documentation Maintenance</a></li>
+            </ul>
+        </nav>
+
+    </header>
+
+    <main>
+        <section class="faq">
+            <h2>Documentation Maintenance</h2>
+            <div class="faq-item">
+                <h3>Présentation de l'architecture logicielle</h3>
+                <p><strong>Front :</strong> L'application front-end est développée avec React Native et Expo. La gestion des écrans est effectuée à l'aide de composants. Les routes utilisées sont stockées dans des services en fonction du thème de la route (tea/market/authentification).</p>
+                <p><strong>Back :</strong> Le back-end est développé avec NestJS. Nous utilisons la bibliothèque Stripe pour le système de paiement en ligne. L'architecture comprend :
+                <ul>
+                    <li>L'utilisation d'un script Python pour scrapper les données</li>
+                    <li>Un dossier modèle qui regroupe tous les modèles de base de données</li>
+                    <li>Une API constituée du service (fonctionnement de la requête), du contrôleur (création de la route) et d'un DTO qui vérifie si les informations envoyées sont sous la bonne forme</li>
+                </ul>
+                </p>
+                <p><strong>BDD :</strong> MySQL est utilisé comme système de gestion de base de données.</p>
+            </div>
+            <div class="faq-item">
+                <h3>Présentation de l'environnement technique</h3>
+                <p>Les données sont stockées dans le local storage (Async Storage). Nous utilisons l'IDE VS Code aussi bien pour le front que pour le back. Pour une meilleure visualisation de la base de données, nous utilisons DBeaver.</p>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 Teapot. Tous droits réservés.</p>
+    </footer>
+</body>
+</html>
