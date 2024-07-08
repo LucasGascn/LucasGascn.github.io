@@ -1,90 +1,125 @@
 <!DOCTYPE html>
 <html lang="fr">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>TeaPote FAQ - Maintenance</title>
-    <link rel="stylesheet" href="styles.css">
-</head>
-<body>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
     <header>
-        <h1>TeaPote FAQ</h1>
-        <nav>
-            <ul>
-                <li><a href="index.html">Documentation Utilisateur</a></li>
-                <li><a href="maintenance.html">Documentation Maintenance</a></li>
-            </ul>
-        </nav>
-
+      <h1>TeaPote FAQ</h1>
+      <nav>
+        <ul>
+          <li><a href="index.html">Documentation Utilisateur</a></li>
+          <li><a href="maintenance.html">Documentation Maintenance</a></li>
+        </ul>
+      </nav>
     </header>
 
     <main>
-        <section class="faq">
-            <h2>Documentation Maintenance</h2>
-            <div class="faq-item">
-                <h3>Présentation de l'architecture logicielle</h3>
-                <p><strong>Front :</strong> L'application est développé avec le framework react Native et Expo.</p>
-                <P.>le projet est structuré en plusieurs composants séparés par écrans et enrichis de composants plus petits pour décrire chaque élément d’interface indépendant</p>
-                <P.>les services permettant de récupérer les données dans les serveurs sont déclarées en 2 groupes distincts : l’un permettant de gérer l’utilisateur dans l’application, et l’autre permettant de récupérer l'infirmation directement liée aux thés.</p>
-                <p><strong>Back :</strong> Le back-end est développé avec Nest js. Nous utilisons la bibliothèque Stripe pour le système de paiement en ligne. L'architecture comprend :</p>
-                <ul>
-                    <li>L'utilisation d'un script Python pour scrapper les données</li>
-                    <li>Un dossier "model" qui regroupe tous les modèles de base de données</li>
-                    <li>Une API constituée du service (fonctionnement de la requête), du contrôleur (création de la route) et d'un DTO qui vérifie si les informations envoyées sont sous la bonne forme</li>
-                    <li>L'utilisation de Prisma comme ORM pour interagir avec la base de données</li>
-                </ul>
-                </p>
-                <p><strong>BDD :</strong> MySQL est utilisé comme système de gestion de base de données.</p>
-            </div>
-            <div class="faq-item">
-                <h3>Présentation de l'environnement technique</h3>
-                <p>Les données lors de la connexion sont stockées dans le local storage (token et id). Nous utilisons l'IDE VS Code aussi bien pour le front que pour le back. Pour une meilleure visualisation de la base de données, nous utilisons DBeaver.</p>
-            </div>
-            <div class="faq-item">
-                <h3>Les fonctionnalités</h3>
-                <p>- Authentification et gestion des utilisateurs.</p>
-                <p> - Création, mise à jour et suppression de thé dans la bibliothèque.</p>
-                <p> - Gestion des amis et des interactions sociales.</p>
-                <p> - Prise en charge des tests unitaires et de bout en bout.</p>
-                <p> - Support pour le développement, le mode veille et le mode production.</p>
-            </div>
-            <div class="faq-item">
-                <h3>Les lignes de commandes utiles</h3>
-                <p>- Installation nécessaire</p>
-                <p>- yarn install (front-end)</p>
-                <p>- npm i (backend)</p>
-                <p>- Démarrer l'application :</p>
-                <p>- Développement : `npm run start`</p>
-                <p>- Mode veille : `npm run start:dev`</p>
-                <p>- Production : `npm run start:prod`</p>
-                
-               <p> - Tester l'application :</p>
-               <p>- Tests unitaires : `npm run test`</p>
-               <p>- Tests de bout en bout : `npm run test:e2e`</p>
-               <p>- Couverture des tests : `npm run test:cov`</p>
-                
-               <p>- Prisma :</p>
-               <p>- Générer les migrations : `npx prisma migrate dev`</p>
-               <p>- Appliquer les migrations : `npx prisma migrate deploy`</p>
-               <p>- Ouvrir le studio Prisma : `npx prisma studio`</p>
-                
-               <p>- Autres Commandes NestJS :</p>
-               <p>- Générer un module : `nest g module (nom)`</p>
-                <p>- Générer un contrôleur : `nest g controller (nom)`</p>
-                    <p>- Générer un service : `nest g service (nom)`</p>
-            </div>
-            <div class="faq-item">
-                <h3>Support</h3>
-                <p>Pour des questions ou des problèmes, vous pouvez rejoindre notre serveur Discord ou contacter le développeur principal.
-                </p>
-                <a href="https://discord.gg/7B4fZXs2Nn">Notre salon discord</a>
-            </div>
-
-        </section>
+      <section class="faq">
+        <h2>Documentation Maintenance</h2>
+        <div class="faq-item">
+          <h3>Présentation de l'architecture logicielle</h3>
+          <p>
+            <strong>Front :</strong> L'application est développée avec le
+            framework React Native et Expo.
+          </p>
+          <p>
+            Le projet est structuré en plusieurs composants séparés par écrans
+            et enrichis de composants plus petits pour décrire chaque élément
+            d’interface indépendant.
+          </p>
+          <p>
+            Les services permettant de récupérer les données dans les serveurs
+            sont déclarés en deux groupes distincts : l’un permettant de gérer
+            l’utilisateur dans l’application, et l’autre permettant de récupérer
+            les informations directement liées aux thés.
+          </p>
+          <p>
+            <strong>Back :</strong> Le back-end est développé avec NestJS. Nous
+            utilisons la bibliothèque Stripe pour le système de paiement en
+            ligne. L'architecture comprend :
+          </p>
+          <ul>
+            <li>L'utilisation d'un script Python pour scrapper les données.</li>
+            <li>
+              Un dossier "model" qui regroupe tous les modèles de base de
+              données.
+            </li>
+            <li>
+              Une API constituée du service (fonctionnement de la requête), du
+              contrôleur (création de la route) et d'un DTO qui vérifie si les
+              informations envoyées sont sous la bonne forme.
+            </li>
+            <li>
+              L'utilisation de Prisma comme ORM pour interagir avec la base de
+              données.
+            </li>
+          </ul>
+          <p>
+            <strong>BDD :</strong> MySQL est utilisé comme système de gestion de
+            base de données.
+          </p>
+        </div>
+        <div class="faq-item">
+          <h3>Présentation de l'environnement technique</h3>
+          <p>
+            Les données lors de la connexion sont stockées dans le local storage
+            (token et id). Nous utilisons l'IDE VS Code aussi bien pour le front
+            que pour le back. Pour une meilleure visualisation de la base de
+            données, nous utilisons DBeaver.
+          </p>
+        </div>
+        <div class="faq-item">
+          <h3>Les fonctionnalités</h3>
+          <p>- Authentification et gestion des utilisateurs.</p>
+          <p>
+            - Création, mise à jour et suppression de thé dans la bibliothèque.
+          </p>
+          <p>- Gestion des amis et des interactions sociales.</p>
+          <p>- Prise en charge des tests unitaires et de bout en bout.</p>
+          <p>
+            - Support pour le développement, le mode veille et le mode
+            production.
+          </p>
+        </div>
+        <div class="faq-item">
+          <h3>Les lignes de commandes utiles</h3>
+          <p>- Installation nécessaire :</p>
+          <p>- yarn install (front-end)</p>
+          <p>- npm i (backend)</p>
+          <p>- Démarrer l'application :</p>
+          <p>- Développement : `npm run start`</p>
+          <p>- Mode veille : `npm run start:dev`</p>
+          <p>- Production : `npm run start:prod`</p>
+          <p>- Tester l'application :</p>
+          <p>- Tests unitaires : `npm run test`</p>
+          <p>- Tests de bout en bout : `npm run test:e2e`</p>
+          <p>- Couverture des tests : `npm run test:cov`</p>
+          <p>- Prisma :</p>
+          <p>- Générer les migrations : `npx prisma migrate dev`</p>
+          <p>- Appliquer les migrations : `npx prisma migrate deploy`</p>
+          <p>- Ouvrir le studio Prisma : `npx prisma studio`</p>
+          <p>- Autres Commandes NestJS :</p>
+          <p>- Générer un module : `nest g module (nom)`</p>
+          <p>- Générer un contrôleur : `nest g controller (nom)`</p>
+          <p>- Générer un service : `nest g service (nom)`</p>
+        </div>
+        <div class="faq-item">
+          <h3>Support</h3>
+          <p>
+            Pour des questions ou des problèmes, vous pouvez rejoindre notre
+            serveur Discord ou contacter le développeur principal.
+          </p>
+          <a href="https://discord.gg/7B4fZXs2Nn">Notre salon discord</a>
+        </div>
+      </section>
     </main>
 
     <footer>
-        <p>&copy; 2024 TeaPote. Tous droits réservés.</p>
+      <p>&copy; 2024 TeaPote. Tous droits réservés.</p>
     </footer>
-</body>
+  </body>
 </html>
